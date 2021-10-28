@@ -1,14 +1,36 @@
-#horna_tabulka {
-    background-color: yellow;
-    border: 20px solid greenyellow; 
-    border-collapse: collapse;
-}
 h1 {
     color: indigo;
 }
-.a {
+.a, .b, .c, .d {
     text-align: center;
+    font-family: monospace, Courier;
 }
 body{
     background-color: khaki;
+    font-size: large;
 }
+#horna_tabulka {
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+}
+/* color of links */
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+  a:visited {
+    color: black;
+    background-color: orange;
+    text-decoration: none;
+}
+  a:hover {
+    color: whitesmoke;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+/* end of colored links */
