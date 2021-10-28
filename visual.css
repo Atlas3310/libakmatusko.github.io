@@ -1,0 +1,14 @@
+#horna_tabulka {
+    background-color: yellow;
+    border: 20px solid greenyellow; 
+    border-collapse: collapse;
+}
+h1 {
+    color: indigo;
+}
+.a {
+    text-align: center;
+}
+body{
+    background-color: khaki;
+}
