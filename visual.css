@@ -1,13 +1,17 @@
-h1 {
-    color: indigo;
-}
-.a, .b, .c, .d, .table {
-    text-align: center;
-    font-family: monospace, Courier;
-}
 body{
     background-color: khaki;
     font-size: large;
+}
+h1 {
+    color: indigo;
+}
+.a {
+    text-align: center;
+    font-family: monospace, Courier;
+}
+video {
+    width: 70%;
+    height: auto;
 }
 /* color of links */
 a:link {
