@@ -40,4 +40,15 @@ function add(poradie) {
         videoelement.appendChild(sourceMP4);
         removing.appendChild(videoelement)
     }
+
+    if (poradie == 2){
+        download_a = document.createElement("A");
+        download_a.href = "New_success_intermediate_workbok_answer.pdf";
+        download_a.target = "_blank";
+        download_a.download = "Anj_pdf";
+        download_a_text = document.createElement("H2");
+        download_a_text.appendChild(document.createTextNode("Stiahni Tu!"))
+        download_a.appendChild(download_a_text);
+        removing.appendChild(download_a);
+    }
 }
