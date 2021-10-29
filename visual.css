@@ -13,30 +13,51 @@ video {
     width: 70%;
     height: auto;
 }
+button {
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: white; 
+  color: cyan; 
+  border: 2px solid cyan;
+}
+button:hover {
+    background-color: cyan; 
+  color: black; 
+  border: 2px solid black;
+}
+/*nerobrayovat veci*/
+.invisible {
+    display: none;
+}
 /* color of links */
 a:link {
     color: black;
     background-color: transparent;
     text-decoration: none;
 }
-  a:visited {
+a:visited {
     color: black;
     background-color: transparent;
     text-decoration: none;
 }
-  a:hover {
-    color: whitesmoke;
+a:hover {
+    color: gray;
     background-color: transparent;
     text-decoration: underline;
 }
-  a:active {
+a:active {
     color: gray;
     background-color: transparent;
     text-decoration: none;
 }
 /* end of colored links */
 
-#horna_tabulka {
+#horna_tabulka, .buttons {
   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 2000% 2000%;
   

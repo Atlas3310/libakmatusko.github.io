@@ -47,8 +47,48 @@ function add(poradie) {
         download_a.target = "_blank";
         download_a.download = "Anj_pdf";
         download_a_text = document.createElement("H2");
-        download_a_text.appendChild(document.createTextNode("Stiahni Tu!"))
+        download_a_text.appendChild(document.createTextNode("Hru stiahni Tu!"));
         download_a.appendChild(download_a_text);
+        //ostatne subory
+        other_downloads = document.createElement("BUTTON");
+        other_downloads.class = "buttons";
+        other_downloads.onclick = download_table();
+        other_downloads.appendChild(document.createTextNode("Ostatné súbory na stiahnutie."));
+        //tabulka na ostatne subory
+        //table = document.createElement("TABLE");
+        //tbody = document.createElement("TBODY");
+        //table.appendChild("tbody")
+        //actual yobrayovanie
         removing.appendChild(download_a);
+        removing.appendChild(other_downloads);
     }
 }
+
+function download_table() {
+    removing = document.getElementById("remove");
+
+    table = document.createElement("TABLE");
+    removing.appendChild(table)
+    tbody = document.createElement("TBODY");
+    table.appendChild(tbody)
+     
+        var i;
+        for(i = 0; i < files_to_download.length; i++){
+            newRow = tbody.insertRow();
+            nazov = newRow.insertCell(0);
+            link = newRow.insertCell(1);
+            newNameText = document.createTextNode(files_to_download[i].name)
+            newLinkText = document.createTextNode(files_to_download[i].link)
+            nazov.appendChild(newNameText)
+            link.appendChild(newLinkText)
+        }
+}
+
+class file {
+    constructor(name, link){
+        this.name = name;
+        this.link = link;
+    }
+}
+
+const files_to_download = [new file("ban <user> [reason]", "bans user  "), new file("unbans user   ", "ban_members")];
