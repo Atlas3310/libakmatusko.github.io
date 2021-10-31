@@ -1,4 +1,8 @@
 function replace(poradie) {
+    if (visibleTable == true){
+        document.getElementById("download_table2").id = "download_table1";
+        visibleTable = false
+    }
     remove();
     add(poradie);
 }
@@ -53,7 +57,9 @@ function add(poradie) {
         //ostatne subory
         other_downloads = document.createElement("BUTTON");
         other_downloads.class = "buttons";
-        other_downloads.setAttribute("onclick","download_table();");
+        other_downloads.id = "other_downloads";
+        other_downloads.setAttribute("onclick","downloadsTable();");
+        //other_downloads.setAttribute("onclick","download_table();");
         other_downloads.appendChild(document.createTextNode("Ostatné súbory na stiahnutie."));
         //tabulka na ostatne subory
         
@@ -97,3 +103,17 @@ class file {
 }
 
 const files_to_download = [new file("Sigma-1", "download"), new file("Sigma-2", "download")];
+
+//idk skusam
+let visibleTable = false
+
+function downloadsTable() {
+    if (visibleTable == true){
+        document.getElementById("download_table2").id = "download_table1";
+        visibleTable = false
+    }
+    else if (visibleTable == false){
+        document.getElementById("download_table1").id = "download_table2";
+        visibleTable = true
+    }
+}

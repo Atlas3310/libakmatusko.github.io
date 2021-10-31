@@ -22,7 +22,7 @@ button {
     display: inline-block;
     font-size: 1.2em;
     cursor: pointer;
-    background-color: white; 
+    background-color: whitesmoke; 
   color: cyan; 
   border: 2px solid cyan;
 }
@@ -42,9 +42,37 @@ button:hover {
     width: 100%;
     text-align: center;
 }
-/*nerobrayovat veci*/
-.invisible {
-    display: none;
+#pre_tabulku {
+    font-size: 150%;
+}
+/*nezobrazovane veci*/
+#download_table1 {
+    width:30%;
+    height:300px;
+    display:none;
+    position:fixed;
+    left: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*zobrazovane veci*/
+#download_table2 {
+    background-color: cyan;
+    width:30%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    display:table;
+    position:fixed;
+    left: 35%;
+    top: 250px;
+}
+.download_bunky
+{
+    border: 2px solid whitesmoke;
+}
+.download_bunky_header
+{
+    border: 1px solid cyan;
 }
 /* color of links */
 a:link {
