@@ -22,6 +22,7 @@ function add(poradie) {
     adding = document.getElementById("add");
     removable_content = document.createElement("div");
     removable_content.id = "remove";
+    removable_content.aling = "senter";
     content = document.createElement("H1");
     text = document.createTextNode(nadpis);
     content.appendChild(text);
@@ -52,12 +53,10 @@ function add(poradie) {
         //ostatne subory
         other_downloads = document.createElement("BUTTON");
         other_downloads.class = "buttons";
-        other_downloads.onclick = download_table();
+        other_downloads.setAttribute("onclick","download_table();");
         other_downloads.appendChild(document.createTextNode("Ostatné súbory na stiahnutie."));
         //tabulka na ostatne subory
-        //table = document.createElement("TABLE");
-        //tbody = document.createElement("TBODY");
-        //table.appendChild("tbody")
+        
         //actual yobrayovanie
         removing.appendChild(download_a);
         removing.appendChild(other_downloads);
@@ -66,10 +65,16 @@ function add(poradie) {
 
 function download_table() {
     removing = document.getElementById("remove");
-
+    removing.classList.add("centered")
+    big_table = document.createElement("TABLE");
+    big_table.classList.add("centered");
+    big_table.id = "big_table";
     table = document.createElement("TABLE");
-    removing.appendChild(table)
+    table.classList.add("download");
+    removing.appendChild(big_table)
+    big_table.appendChild(table)
     tbody = document.createElement("TBODY");
+    //tbody.classList.add("download");
     table.appendChild(tbody)
      
         var i;
@@ -91,4 +96,4 @@ class file {
     }
 }
 
-const files_to_download = [new file("ban <user> [reason]", "bans user  "), new file("unbans user   ", "ban_members")];
+const files_to_download = [new file("Sigma-1", "download"), new file("Sigma-2", "download")];

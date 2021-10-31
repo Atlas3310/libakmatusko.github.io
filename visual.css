@@ -1,6 +1,7 @@
 body{
     background-color: khaki;
     font-size: large;
+    text-align: center;
 }
 h1 {
     color: indigo;
@@ -29,6 +30,17 @@ button:hover {
     background-color: cyan; 
   color: black; 
   border: 2px solid black;
+}
+.download {
+    width: 40%;
+    text-align: center;  
+}
+.centered {
+    text-align: center;
+}
+#big_table {
+    width: 100%;
+    text-align: center;
 }
 /*nerobrayovat veci*/
 .invisible {
