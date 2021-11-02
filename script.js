@@ -35,15 +35,7 @@ function add(poradie) {
     removing = document.getElementById("remove");
 
     if (poradie == 1){
-        videoelement = document.createElement("VIDEO");
-        videoelement.setAttribute("id", "video1");
-        videoelement.setAttribute("controls", "true");
-        
-        var sourceMP4 = document.createElement("source"); 
-        sourceMP4.type = "video/mp4";
-        sourceMP4.src = "Nisemonogatari_episode_8_Toothbrush_scene.mp4";
-        videoelement.appendChild(sourceMP4);
-        removing.appendChild(videoelement)
+        hlavna_stranka()
     }
 
     if (poradie == 2){
@@ -67,46 +59,73 @@ function add(poradie) {
         removing.appendChild(download_a);
         removing.appendChild(other_downloads);
     }
-}
-
-function download_table() {
-    removing = document.getElementById("remove");
-    removing.classList.add("centered")
-    big_table = document.createElement("TABLE");
-    big_table.classList.add("centered");
-    big_table.id = "big_table";
-    table = document.createElement("TABLE");
-    table.classList.add("download");
-    removing.appendChild(big_table)
-    big_table.appendChild(table)
-    tbody = document.createElement("TBODY");
-    //tbody.classList.add("download");
-    table.appendChild(tbody)
-     
-        var i;
-        for(i = 0; i < files_to_download.length; i++){
-            newRow = tbody.insertRow();
-            nazov = newRow.insertCell(0);
-            link = newRow.insertCell(1);
-            newNameText = document.createTextNode(files_to_download[i].name)
-            newLinkText = document.createTextNode(files_to_download[i].link)
-            nazov.appendChild(newNameText)
-            link.appendChild(newLinkText)
-        }
-}
-
-class file {
-    constructor(name, link){
-        this.name = name;
-        this.link = link;
+    if (poradie == 3){
+        removing = document.getElementById("remove");
+        vecera = document.createElement("IMG");
+        vecera.id = "vecera"
+        removing.appendChild(vecera);
+        text_o_nas =document.createElement("DIV");
+        text_o_nas.id = text_o_nas;
+        text_o_nas.innerHTML = "Toto same my, štiria autori SigmaGame: <a href=#Abby>Abby Beblavá</a>, <a href=#Martin>Martin Kozár</a>, <a href=#Matus>Matúš Libák</a>, <a href=#Leo>Leo Oros</a><br><br>";
+        removing.appendChild(text_o_nas);
+        vsetci()
     }
 }
+//hlavna stranka
+function hlavna_stranka(){
+    popis = document.createElement("P");
+    popis.innerHTML = "<b>SigmaGame je umenie vo všetkých jeho formách. Oko, ucho a meč musia pracovať ako jeden. Je to úloha iba pre najlepších.<br>Skús či si jedným z nich</br>";
+    removing.append(popis);
+    videoelement = document.createElement("VIDEO");
+    videoelement.setAttribute("id", "video1");
+    videoelement.setAttribute("controls", "true");        
+    sourceMP4 = document.createElement("source"); 
+    sourceMP4.type = "video/mp4";
+    sourceMP4.src = "Nisemonogatari_episode_8_Toothbrush_scene.mp4";
+    videoelement.appendChild(sourceMP4);
+    removing.appendChild(videoelement)
+    medzera = document.createElement("P");
+    medzera.innerHTML = "<br><br>";
+    removing.append(medzera);
+}
+//o nas
+function vsetci(){
+    Abby()
+    Martin()
+    Matus()
+    Leo()
+}
+function Abby(){
+    removing = document.getElementById("remove");
+    AbbyDiv = document.createElement("DIV")
+    AbbyDiv.id = "Abby"
+    AbbyDiv.innerHTML = "Som Abby"
+    removing.appendChild(AbbyDiv)
+}
+function Martin(){
+    removing = document.getElementById("remove");
+    MartinDiv = document.createElement("DIV")
+    MartinDiv.id = "Martin"
+    MartinDiv.innerHTML = "Som Martin"
+    removing.appendChild(MartinDiv)
+}
+function Matus(){
+    removing = document.getElementById("remove");
+    MatusDiv = document.createElement("DIV")
+    MatusDiv.id = "Matus"
+    MatusDiv.innerHTML = "Som Matus"
+    removing.appendChild(MatusDiv)
+}
+function Leo(){
+    removing = document.getElementById("remove");
+    LeoDiv = document.createElement("DIV")
+    LeoDiv.id = "Leo"
+    LeoDiv.innerHTML = "Som Leo"
+    removing.appendChild(LeoDiv)
+}
 
-const files_to_download = [new file("Sigma-1", "download"), new file("Sigma-2", "download")];
 
-//idk skusam
 let visibleTable = false
-
 function downloadsTable() {
     if (visibleTable == true){
         document.getElementById("download_table2").id = "download_table1";
@@ -117,3 +136,7 @@ function downloadsTable() {
         visibleTable = true
     }
 }
+
+
+//nacitanie prvej stranky
+add(1)

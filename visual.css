@@ -58,7 +58,7 @@ button:hover {
 /*zobrazovane veci*/
 #download_table2 {
     background-color: cyan;
-    width:30%;
+    width: 30%;
     border: 2px solid black;
     border-collapse: collapse;
     display:table;
