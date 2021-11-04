@@ -38,6 +38,28 @@ button:hover {
 .centered {
     text-align: center;
 }
+#vecera {
+    width: 90%;
+    height: auto;
+}
+#qr {
+    height: 200px;
+    width: auto;
+}
+#QR .tooltiptext{
+    visibility: hidden;
+    width: auto;
+    background-color: cyan;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 4px;
+  
+    z-index: -1;
+}
+#QR:hover .tooltiptext{
+    visibility: visible;
+}
 #big_table {
     width: 100%;
     text-align: center;
@@ -96,7 +118,6 @@ a:active {
     text-decoration: none;
 }
 /* end of colored links */
-
 #horna_tabulka, .buttons {
   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 2000% 2000%;

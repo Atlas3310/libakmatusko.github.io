@@ -62,13 +62,18 @@ function add(poradie) {
     if (poradie == 3){
         removing = document.getElementById("remove");
         vecera = document.createElement("IMG");
-        vecera.id = "vecera"
-        removing.appendChild(vecera);
+        vecera.id = "vecera";
+        vecera.src = "Screenshot_2021-11-03_at_07.38.49.png";
+        vecera_link = document.createElement("A");
+        vecera_link.href = "Screenshot_2021-11-03_at_07.38.49.png";
+        vecera_link.target = "_blank";
+        vecera_link.append(vecera);
+        removing.appendChild(vecera_link);
         text_o_nas =document.createElement("DIV");
         text_o_nas.id = text_o_nas;
-        text_o_nas.innerHTML = "Toto same my, štiria autori SigmaGame: <a href=#Abby>Abby Beblavá</a>, <a href=#Martin>Martin Kozár</a>, <a href=#Matus>Matúš Libák</a>, <a href=#Leo>Leo Oros</a><br><br>";
+        text_o_nas.innerHTML = "<br>Toto same my, štiria autori SigmaGame: <a href=#Abby>Abby Beblavá</a>, <a href=#Martin>Martin Kozár</a>, <a href=#Matus>Matúš Libák</a>, <a href=#Leo>Leo Oros</a><br><br><br>";
         removing.appendChild(text_o_nas);
-        vsetci()
+        vsetci();
     }
 }
 //hlavna stranka
@@ -94,36 +99,52 @@ function vsetci(){
     Martin()
     Matus()
     Leo()
+    QR()
 }
 function Abby(){
     removing = document.getElementById("remove");
     AbbyDiv = document.createElement("DIV")
     AbbyDiv.id = "Abby"
-    AbbyDiv.innerHTML = "Som Abby"
+    AbbyDiv.innerHTML = "Abbygail Beblavá<br>Dizajn, obrázky a vlastne vsetka art robota.<br>Vie totiž kresliť.<br><a href = mailto: abby.beblava@gmail.com>Email</a><br><br>"
     removing.appendChild(AbbyDiv)
 }
 function Martin(){
     removing = document.getElementById("remove");
     MartinDiv = document.createElement("DIV")
     MartinDiv.id = "Martin"
-    MartinDiv.innerHTML = "Som Martin"
+    MartinDiv.innerHTML = "Martin Kozár<br>Hudba, beaty a vsetky sound efekty.<br>Ma hudobny sluch.<br><a href = mailto: martin.kozar2005@gmail.com>Email</a><br><br>"
     removing.appendChild(MartinDiv)
 }
 function Matus(){
     removing = document.getElementById("remove");
     MatusDiv = document.createElement("DIV")
     MatusDiv.id = "Matus"
-    MatusDiv.innerHTML = "Som Matus"
+    MatusDiv.innerHTML = "Matúš Libák<br>Stranka a prezentacia a dobry dojem.<br>Vie robit stranky a prezentovať.<br><a href = mailto: libak.matusko@gmail.com>Email</a><br><br>"
     removing.appendChild(MatusDiv)
 }
 function Leo(){
     removing = document.getElementById("remove");
     LeoDiv = document.createElement("DIV")
     LeoDiv.id = "Leo"
-    LeoDiv.innerHTML = "Som Leo"
+    LeoDiv.innerHTML = "Leo Oros<br>Zaklad hry a herne mechaniky<br>Vie programovať.<br><a href = mailto: leo7968@gmail.com>Email</a><br><br>"
     removing.appendChild(LeoDiv)
 }
-
+function QR() {
+    removing = document.getElementById("remove");
+    QRDiv = document.createElement("DIV")
+    QRDiv.id = "QR"
+    QRDiv.innerHTML = "<span class='tooltiptext'>Príspevok 5€</span><br>Podporte nás<br><br>(Skenuj bankovou aplikáciou.)<br>"
+    vecera = document.createElement("IMG");
+    vecera.id = "qr";
+    vecera.src = "ČSOB Smart platba – PAY by square.png";
+    vecera_link = document.createElement("A");
+    vecera_link.href = "ČSOB Smart platba – PAY by square.png";
+    vecera_link.target = "_blank";
+    vecera_link.append(vecera);
+    QRDiv.appendChild(vecera_link);
+    //QRDiv.innerHTML = '<span class='tooltiptext'>Dobrovoľny príspevok.<br>(Skenuj bankovou aplikáciou.)</span>';
+    removing.appendChild(QRDiv);
+}
 
 let visibleTable = false
 function downloadsTable() {
