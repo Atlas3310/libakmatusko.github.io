@@ -14,6 +14,10 @@ video {
     width: 70%;
     height: auto;
 }
+#profilovka_hry {
+    width: 44%;
+    height: auto;
+}
 button {
     border: none;
     color: black;

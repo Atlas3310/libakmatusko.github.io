@@ -71,7 +71,7 @@ function add(poradie) {
         removing.appendChild(vecera_link);
         text_o_nas =document.createElement("DIV");
         text_o_nas.id = text_o_nas;
-        text_o_nas.innerHTML = "<br>Toto same my, štiria autori SigmaGame: <a href=#Abby>Abby Beblavá</a>, <a href=#Martin>Martin Kozár</a>, <a href=#Matus>Matúš Libák</a>, <a href=#Leo>Leo Oros</a><br><br><br>";
+        text_o_nas.innerHTML = "<br>Toto same my, štiria autori SigmaGame: <a href=#Abby>Abby Beblavá</a>, <a href=#Martin>Martin Kozár</a>, <a href=#Matus>Matúš Libák</a>, <a href=#Leo>Leo Oros</a><br><br>Sme zo školy Alejová 1 v Košiciach. Baví nás informatiaka a toto je naša prvá spoločná súťaž.<br><br><br>";
         removing.appendChild(text_o_nas);
         vsetci();
     }
