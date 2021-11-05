@@ -54,10 +54,14 @@ function add(poradie) {
         //other_downloads.setAttribute("onclick","download_table();");
         other_downloads.appendChild(document.createTextNode("Ostatné súbory na stiahnutie."));
         //tabulka na ostatne subory
+
+        medzera = document.createElement("DIV")
+        medzera.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"
         
         //actual yobrayovanie
         removing.appendChild(download_a);
         removing.appendChild(other_downloads);
+        removing.appendChild(medzera);
     }
     if (poradie == 3){
         removing = document.getElementById("remove");
@@ -99,7 +103,7 @@ function vsetci(){
     Martin()
     Matus()
     Leo()
-    QR()
+    //QR()
 }
 function Abby(){
     removing = document.getElementById("remove");
