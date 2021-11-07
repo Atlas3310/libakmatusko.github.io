@@ -90,7 +90,7 @@ function hlavna_stranka(){
     videoelement.setAttribute("controls", "true");        
     sourceMP4 = document.createElement("source"); 
     sourceMP4.type = "video/mp4";
-    sourceMP4.src = "Nisemonogatari_episode_8_Toothbrush_scene.mp4";
+    sourceMP4.src = "Trailer-SigmaGame.mp4";
     videoelement.appendChild(sourceMP4);
     removing.appendChild(videoelement)
     medzera = document.createElement("P");
