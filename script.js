@@ -40,9 +40,8 @@ function add(poradie) {
 
     if (poradie == 2){
         download_a = document.createElement("A");
-        download_a.href = "Build.zip";
+        download_a.href = "https://www.mediafire.com/file/wfoha6c2ix9wz23/SigmaGame.zip/file";
         download_a.target = "_blank";
-        download_a.download = "Sigma.zip";
         download_a_text = document.createElement("H2");
         download_a_text.appendChild(document.createTextNode("Hru stiahni Tu!"));
         download_a.appendChild(download_a_text);
