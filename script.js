@@ -40,9 +40,9 @@ function add(poradie) {
 
     if (poradie == 2){
         download_a = document.createElement("A");
-        download_a.href = "New_success_intermediate_workbok_answer.pdf";
+        download_a.href = "Build.zip";
         download_a.target = "_blank";
-        download_a.download = "Anj_pdf";
+        download_a.download = "Sigma.zip";
         download_a_text = document.createElement("H2");
         download_a_text.appendChild(document.createTextNode("Hru stiahni Tu!"));
         download_a.appendChild(download_a_text);
@@ -67,9 +67,9 @@ function add(poradie) {
         removing = document.getElementById("remove");
         vecera = document.createElement("IMG");
         vecera.id = "vecera";
-        vecera.src = "Screenshot_2021-11-03_at_07.38.49.png";
+        vecera.src = "team.png";
         vecera_link = document.createElement("A");
-        vecera_link.href = "Screenshot_2021-11-03_at_07.38.49.png";
+        vecera_link.href = "team.png";
         vecera_link.target = "_blank";
         vecera_link.append(vecera);
         removing.appendChild(vecera_link);
